@@ -16,26 +16,7 @@ const Project = () => {
 
   const [key, setKey] = useState('Project1');
 
-  const tabStyle = {
-    
-    backgroundColor: "rgb(94, 32, 133)",
-    border: '2px solid rgb(94, 32, 133) ',
-    borderBottom: "none",
-    color: "white", 
-    padding: "10px 20px",
-    borderRadius: "5px 5px 0 0",
-    position: "relative",
-    zIndex: 1,
-    marginBottom: "0", 
-  };
-
-  const activeTabStyle = {
-    ...tabStyle, 
-    backgroundColor: "rgb(247, 237, 248)", 
-    color: 'black',
-    fontWeight: "bold", 
-    marginRight: '0px',
-  };
+ 
 
   const width = useResponsiveWidth();
 
@@ -44,9 +25,9 @@ const Project = () => {
       <Container className='px-4 pt-4 ' fluid style={{height: 'auto', width, fontFamily: "Libre Baskerville", fontWeight: '400', fontStyle: 'normal'}} id='project'>
         <h1 className='d-flex justify-content-center py-4' style={{fontWeight: '700'}}>My Projects</h1>
 
-        <Tabs id="project" activeKey={key} onSelect={(k) => setKey(k)} className=" justify-content-center" style={{color: 'white'}}>
+        <Tabs id="project" activeKey={key} onSelect={(k) => setKey(k)} fill>
 
-          <Tab eventKey="Project1" title={<span style={key === "Project1" ? activeTabStyle : tabStyle}> # Project-1</span>} style={{backgroundColor: 'rgb(247, 237, 248)', border: '2px solid rgb(94, 32, 133) '}} className='pt-3 pb-5 px-3'>
+          <Tab eventKey="Project1" title= "# Project-1" style={{backgroundColor: 'rgb(247, 237, 248)', border: '1px solid rgb(94, 32, 133) '}} className='pt-3 pb-5 px-3'>
             
             <Row className='pt-4'>
 
@@ -64,12 +45,24 @@ const Project = () => {
                   <h6 className='pt-3'>This web application allows merchants to manage their products by performing CRUD (Create, Read, Update, Delete) operations. Merchants can post new products, update details, remove products, and view them.</h6>
                   <h4 style={{fontWeight: '700', paddingTop: '20px'}}>Technologies</h4>
 
-                  <div className='pt-4'>
+                  <Row className='pt-3'>
+                    <Col>
                     <Link className='py-2 px-4' style={{backgroundColor: 'rgb(238, 217, 251)',textDecoration: 'none', justifyContent: 'center', borderRadius: '20px', color: 'rgb(74, 10, 93)', border: '2px solid rgb(74, 10, 93)', marginRight: '5px'}}>MongoDB</Link> 
+
+                    </Col>
+                    <Col>
                     <Link className='py-2 px-4' style={{backgroundColor: 'rgb(238, 217, 251)',textDecoration: 'none', justifyContent: 'center', borderRadius: '20px', color: 'rgb(74, 10, 93)', border: '2px solid rgb(74, 10, 93)', marginRight: '5px'}}>Express</Link>
+
+                    </Col>
+                    <Col>
                     <Link className='py-2 px-4' style={{backgroundColor: 'rgb(238, 217, 251)',textDecoration: 'none', justifyContent: 'center', borderRadius: '20px', color: 'rgb(74, 10, 93)', border: '2px solid rgb(74, 10, 93)', marginRight: '5px'}}>React</Link>
+
+                    </Col>
+                    <Col>
                     <Link className='py-2 px-4' style={{backgroundColor: 'rgb(238, 217, 251)',textDecoration: 'none', justifyContent: 'center', borderRadius: '20px', color: 'rgb(74, 10, 93)', border: '2px solid rgb(74, 10, 93)', marginRight: '5px'}}>node js</Link>
-                    </div>
+
+                    </Col>
+                  </Row>
                 </Stack>
           
               </Col>
@@ -81,7 +74,7 @@ const Project = () => {
             </Row>
           </Tab>
 
-          <Tab eventKey="Project2" title={<span style={key === "Project2" ? activeTabStyle : tabStyle}> # Project-2</span>} style={{backgroundColor: 'rgb(247, 237, 248)', border: '2px solid rgb(94, 32, 133) '}} className='pt-3 pb-5 px-3'>
+          <Tab eventKey="Project2" title="# Project-2" style={{backgroundColor: 'rgb(247, 237, 248)', border: '1px solid rgb(94, 32, 133) '}} className='pt-3 pb-5 px-3'>
             
             <Row className='pt-4'>
             
@@ -99,10 +92,16 @@ const Project = () => {
                 <h6 className='pt-3'> A personal website designed to showcase your skills, projects, and achievements. It acts as a digital resume and portfolio.</h6>
                 <h4 style={{fontWeight: '700', paddingTop: '20px'}}>Technologies</h4>
 
-                <ButtonGroup className='pt-3'>
+                <Row className='pt-3'>
+                  <Col>
                   <Link className='py-2 px-4' style={{backgroundColor: 'rgb(238, 217, 251)',textDecoration: 'none', justifyContent: 'center', borderRadius: '20px', color: 'rgb(74, 10, 93)', border: '2px solid rgb(74, 10, 93)', marginRight: '5px'}}>React</Link>
+
+                  </Col>
+                  <Col>
                   <Link className='py-2 px-4' style={{backgroundColor: 'rgb(238, 217, 251)',textDecoration: 'none', justifyContent: 'center', borderRadius: '20px', color: 'rgb(74, 10, 93)', border: '2px solid rgb(74, 10, 93)', marginRight: '5px'}}>Java Script</Link>
-                </ButtonGroup>
+
+                  </Col>
+                </Row>
               </Stack>
               </Col>
               <div className='d-flex justify-content-end align-items-end'>
@@ -112,7 +111,7 @@ const Project = () => {
             </Row>
           </Tab>
 
-          <Tab eventKey="Project3" title={<span style={key === "Project3" ? activeTabStyle : tabStyle}> # Project-3</span>} style={{backgroundColor: 'rgb(247, 237, 248)', border: '2px solid rgb(94, 32, 133) '}} className='pt-3 pb-5 px-3'>
+          <Tab eventKey="Project3" title="# Project-3" style={{backgroundColor: 'rgb(247, 237, 248)', border: '1px solid rgb(94, 32, 133) '}} className='pt-3 pb-5 px-3'>
            
             <Row className='pt-4'>
 
@@ -130,12 +129,23 @@ const Project = () => {
                   <h6 className='pt-3'>This project involves designing a network for a college campus using Cisco Packet Tracer, simulating devices, routers, switches, and configuring network elements.</h6>
                   <h4 style={{fontWeight: '700', paddingTop: '20px'}}>Technologies</h4>
 
-                  <ButtonGroup className='pt-3'>
+                  <Row className='pt-3'>
+                    <Col>
+                      <Link className='py-2 px-4' style={{backgroundColor: 'rgb(238, 217, 251)',textDecoration: 'none', justifyContent: 'center', borderRadius: '20px', color: 'rgb(74, 10, 93)', border: '2px solid rgb(74, 10, 93)', marginRight: '5px'}}>EIGRP</Link>
+                    </Col>
+                    <Col>
                     <Link className='py-2 px-4' style={{backgroundColor: 'rgb(238, 217, 251)',textDecoration: 'none', justifyContent: 'center', borderRadius: '20px', color: 'rgb(74, 10, 93)', border: '2px solid rgb(74, 10, 93)', marginRight: '5px'}}>EIGRP</Link>
-                    <Link className='py-2 px-4' style={{backgroundColor: 'rgb(238, 217, 251)',textDecoration: 'none', justifyContent: 'center', borderRadius: '20px', color: 'rgb(74, 10, 93)', border: '2px solid rgb(74, 10, 93)', marginRight: '5px'}}>vlan</Link>
+
+                    </Col>
+                    <Col>
                     <Link className='py-2 px-4' style={{backgroundColor: 'rgb(238, 217, 251)',textDecoration: 'none', justifyContent: 'center', borderRadius: '20px', color: 'rgb(74, 10, 93)', border: '2px solid rgb(74, 10, 93)', marginRight: '5px'}}>DHCP</Link>
+
+                    </Col>
+                    <Col>
                     <Link className='py-2 px-4' style={{backgroundColor: 'rgb(238, 217, 251)',textDecoration: 'none', justifyContent: 'center', borderRadius: '20px', color: 'rgb(74, 10, 93)', border: '2px solid rgb(74, 10, 93)', marginRight: '5px'}}>servers</Link>
-                  </ButtonGroup>
+
+                    </Col>
+                  </Row>
 
                   
                 </Stack>

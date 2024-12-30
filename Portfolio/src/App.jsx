@@ -9,6 +9,7 @@ import Navigation from "./components/Navigation";
 import ScrollThrough from "./components/ScrollThrough";
 import Qualification from "./components/Qualifucation";
 import Project from "./components/Project";
+import Demo from "./components/demo";
 
 
 function App() {
@@ -34,7 +35,7 @@ function App() {
           <div style={{background: 'rgb(238, 217, 251)'}}>
             <Project />
           </div>
-        
+        {/* <Demo /> */}
           <div style={{background: 'rgb(238, 217, 251)'}}>
             <Skills />
           </div>
