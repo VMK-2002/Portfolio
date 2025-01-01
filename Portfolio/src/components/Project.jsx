@@ -12,6 +12,7 @@ import { VscSourceControl } from "react-icons/vsc";
 import { useResponsiveWidth } from '../Func';
 import { useResponsiveFontSize } from '../Func';
 import Stack from 'react-bootstrap/esm/Stack';
+import { MdOutlineInfo } from "react-icons/md";
 
 const Project = () => {
 
@@ -43,18 +44,21 @@ const Project = () => {
 
   return (
     <div className="d-flex flex-column align-items-center mb-5">
-      <Container className=' pt-4 ' fluid style={{height: 'auto', width,fontSize, fontFamily: "Libre Baskerville", fontWeight: '400', fontStyle: 'normal'}} id='project'>
+      <Container className=' pt-4 ' fluid style={{height: 'auto', width: '100vw',fontSize, fontFamily: "Libre Baskerville", fontWeight: '400', fontStyle: 'normal'}} id='project'>
         <h1 className='d-flex justify-content-center py-4' style={{fontWeight: '700'}}>My Projects</h1>
 
         <Tabs id="project" activeKey={key} onSelect={(k) => setKey(k)} fill className='m-0'>
 
-          <Tab eventKey="Project1" title={<div style={key === 'Project1' ? activeTabStyle : tabStyle}>Project-1</div>} style={{backgroundColor: 'rgb(247, 237, 248)', border: '1px solid rgb(94, 32, 133) '}} className='m-0 pb-5 px-3'>
+          <Tab eventKey="Project1" title={<div style={key === 'Project1' ? activeTabStyle : tabStyle}>Project-1</div>} style={{backgroundColor: 'rgb(247, 237, 248)', border: '1px solid rgb(94, 32, 133) '}} className='m-0 pb-3 px-3'>
             
-                <h2 style={{fontWeight: '700'}} className='pb-3 pt-4 d-flex justify-content-center'>E-commerce site for Merchants</h2>
+                <h2 style={{fontWeight: '700'}} className='pb-3 pt-4 mt-3 mb-5 d-flex justify-content-center'>E-commerce site for Merchants</h2>
+                <Row>
+                  <Col md={6} sm={12} >
                 <Figure className='d-flex align-items-center justify-content-center'>
-                  <Figure.Image width={720} height={480} alt="e-commerce site" src="/Projects/e-commerce.png"/>
+                  <Figure.Image width={720} height={480} alt="e-commerce site" src="/Projects/e-com.png" style={{border: '2px solid rgb(94, 32, 133)'}}/>
                 </Figure>
-             
+                </Col>
+                <Col md={6} sm={12} >
                 <Stack direction='vertical' className=' mx-2'>
 
                   <h4 style={{fontWeight: '700'}}>Description</h4>
@@ -70,24 +74,33 @@ const Project = () => {
                     </Col>
                   </Row>
                 </Stack>
-          
+                
               
 
-              <div className='d-flex justify-content-end align-items-end'>
-                <a className='py-2 px-4 me-2 mt-4' style={{backgroundColor: 'rgb(151, 68, 202)', color : 'white', textDecoration: 'none',cursor: 'pointer', border: '1px solid black' }} href='https://github.com/VMK-2002/MERN-kickstart' target='blank'>Source <VscSourceControl /></a>
-                <a className='py-2 px-4 me-2 mt-4' style={{backgroundColor: 'rgb(151, 68, 202)', color : 'white', textDecoration: 'none',cursor: 'pointer', border: '1px solid black'}} href='https://mern-kickstart.onrender.com/' target='blank'>Visit <FaExternalLinkAlt /></a>
+              <div className='d-flex justify-content-start align-items-end mt-5'>
+                <Stack>
+              <p style={{fontSize: '10px', color: 'red', paddingBottom: '2px'}}><MdOutlineInfo /> Visiting this Project may take a minute to load for the first time. Be patient</p>
+                <Stack direction='horizontal'>
+                <a className='py-2 px-4 me-2' style={{backgroundColor: 'rgb(151, 68, 202)', color : 'white', textDecoration: 'none',cursor: 'pointer', border: '1px solid black' }} href='https://github.com/VMK-2002/MERN-kickstart' target='blank'>Source <VscSourceControl /></a>
+                <a className='py-2 px-4 me-2 ' style={{backgroundColor: 'rgb(151, 68, 202)', color : 'white', textDecoration: 'none',cursor: 'pointer', border: '1px solid black'}} href='https://mern-kickstart.onrender.com/' target='blank'>Visit <FaExternalLinkAlt /></a>
+                </Stack>
+                </Stack>
               </div>
-            
+              </Col>
+              </Row>
           </Tab>
 
-          <Tab eventKey="Project2" title={<div style={key === 'Project2' ? activeTabStyle : tabStyle}>Project-2</div>} style={{backgroundColor: 'rgb(247, 237, 248)', border: '1px solid rgb(94, 32, 133) '}} className='pt-3 pb-5 px-3'>
+          <Tab eventKey="Project2" title={<div style={key === 'Project2' ? activeTabStyle : tabStyle}>Project-2</div>} style={{backgroundColor: 'rgb(247, 237, 248)', border: '1px solid rgb(94, 32, 133) '}} className='pt-3 pb-3 px-3'>
             
             
-                <h2 style={{fontWeight: '700'}} className='pb-3 pt-4 d-flex justify-content-center'>My Portfolio</h2>
+                <h2 style={{fontWeight: '700'}} className='pb-3 pt-4 mt-3 mb-5 d-flex justify-content-center'>My Portfolio</h2>
+                <Row>
+                  <Col md={6} sm={12} >
                 <Figure className='d-flex align-items-center justify-content-center'>
-                  <Figure.Image width={720} height={480} alt="My-Portfolio" src="/Projects/myp.png"/>
+                  <Figure.Image width={720} height={480} alt="My-Portfolio" src="/Projects/myp.png" style={{border: '2px solid rgb(94, 32, 133)'}}/>
                 </Figure>
-              
+                </Col>
+                <Col md={6} sm={12} >
                 <Stack direction='vertical' className=' mx-2'>
 
                 <h4 style={{fontWeight: '700'}}>Description</h4>
@@ -103,21 +116,25 @@ const Project = () => {
                 </Row>
               </Stack>
              
-              <div className='d-flex justify-content-end align-items-end'>
+              <div className='d-flex justify-content-start align-items-end mt-5'>
                 <a className='py-2 px-4 me-2 mt-4' style={{backgroundColor: 'rgb(151, 68, 202)', color : 'white', textDecoration: 'none',cursor: 'pointer', border: '1px solid black' }} href='https://github.com/VMK-2002/Portfolio' target='blank'>Source <VscSourceControl /></a>
                 <Link className='py-2 px-4 me-2 mt-4' style={{backgroundColor: 'rgb(151, 68, 202)', color : 'white', textDecoration: 'none',cursor: 'pointer', border: '1px solid black'}} to="home" spy={true} smooth={true} offset={0} duration={500}>Visit <FaExternalLinkAlt /></Link>
               </div>
-           
+              </Col>
+              </Row>
           </Tab>
 
-          <Tab eventKey="Project3" title={<div style={key === 'Project3' ? activeTabStyle : tabStyle}>Project-3</div>} style={{backgroundColor: 'rgb(247, 237, 248)', border: '1px solid rgb(94, 32, 133) '}} className='pt-3 pb-5 px-3'>
+          <Tab eventKey="Project3" title={<div style={key === 'Project3' ? activeTabStyle : tabStyle}>Project-3</div>} style={{backgroundColor: 'rgb(247, 237, 248)', border: '1px solid rgb(94, 32, 133) '}} className='pt-3 pb-3 px-3'>
            
          
-                <h2 style={{fontWeight: '700'}} className='pb-3 pt-4 d-flex justify-content-center'>Collage Network Design</h2>
+                <h2 style={{fontWeight: '700'}} className='pb-3 pt-4 mt-3 mb-5 d-flex justify-content-center'>Collage Network Design</h2>
+                <Row>
+                  <Col md={6} sm={12} >
                 <Figure className='d-flex align-items-center justify-content-center'>
-                  <Figure.Image width={720} height={480} alt="Collage-Network" src="/Projects/clgnet.png"/>
+                  <Figure.Image width={720} height={480} alt="Collage-Network" src="/Projects/clgnet.png" style={{border: '2px solid rgb(94, 32, 133)'}}/>
                 </Figure>
-           
+                </Col>
+                <Col md={6} sm={12} >
                 <Stack direction='vertical' className=' mx-2'>
 
                   <h4 style={{fontWeight: '700'}}>Description</h4>
@@ -136,11 +153,12 @@ const Project = () => {
                   
                 </Stack>
               
-              <div className='d-flex justify-content-end align-items-end'>
+              <div className='d-flex justify-content-start align-items-end mt-5'>
                 <a className='py-2 px-4 me-2 mt-4' style={{backgroundColor: 'rgb(151, 68, 202)', color : 'white', textDecoration: 'none',cursor: 'pointer', border: '1px solid black'}} href='https://github.com/VMK-2002/Collage-Network' target='blank'>Source <VscSourceControl /></a>
                 <a className='py-2 px-4 me-2 mt-4' style={{backgroundColor: 'rgb(151, 68, 202)', color : 'white', textDecoration: 'none',cursor: 'pointer', border: '1px solid black'}} href='https://drive.google.com/file/d/1qKPgkHKQAD6rfS3pidcfwDRFLJwPiQSW/view?usp=sharing' target='blank'>Visit <FaExternalLinkAlt /></a>
               </div>
-          
+              </Col>
+              </Row>
           </Tab>
         </Tabs>
       </Container>

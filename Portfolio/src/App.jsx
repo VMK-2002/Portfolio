@@ -35,7 +35,7 @@ function App() {
           <div style={{background: 'white'}}>
             <Project />
           </div>
-        {/* <Demo /> */}
+          
           <div style={{background: 'rgb(238, 217, 251)'}}>
             <Skills />
           </div>
