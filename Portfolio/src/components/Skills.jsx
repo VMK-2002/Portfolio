@@ -3,14 +3,15 @@ import Button from 'react-bootstrap/Button';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import { useState } from 'react';
 import Row from 'react-bootstrap/Row';
-import { Networking, Programming, WebDevelopment } from '../Func';
-
+import { useResponsiveFontSize } from '../Func';
+import { Networking, Programming, WebDevelopment } from '../SkillFunc';
 
 const Skills = () => {
 
   const [web, setweb] = useState(true);
   const [program, setprogram] = useState(false);
   const [network, setnetwork] = useState(false);
+  const fontSize = useResponsiveFontSize();
 
   const handleweb = () => {
     setweb(true); 
@@ -45,21 +46,23 @@ const Skills = () => {
      });
 
      const clickWeb = () => ({
-      border: web ? '3px solid rgb(94, 32, 133)' : '3px solid white',
+      border: web ? '2px solid rgb(94, 32, 133)' : '2px solid white',
+      transition: 'all 0.3s ease',
      });
 
      const clickProgram = () => ({
-      border: program ? '3px solid rgb(94, 32, 133)' : '3px solid white',
-     
+      border: program ? '2px solid rgb(94, 32, 133)' : '2px solid white',
+      transition: 'all 0.3s ease',
      });
 
      const clickNetwork = () => ({
-      border: network ? '3px solid rgb(94, 32, 133)' : '3px solid white',
+      border: network ? '2px solid rgb(94, 32, 133)' : '2px solid white',
+      transition: 'all 0.3s ease',
      });
 
   return (
-    <div className='w-100 fluid d-flex flex-column align-items-center  pb-5 pt-3' style={{height: '85vh', fontFamily: "Libre Baskerville", fontWeight: '700', fontStyle: 'normal'}} id='skill'>
-      <h1  >Skills</h1>
+    <div className='w-100 fluid d-flex flex-column align-items-center  pb-5 pt-5 mt-5' style={{ height: '100vh', fontFamily: "Karla", fontWeight: '700', fontStyle: 'normal'}} id='skill'>
+      <h1 style={{fontFamily: 'Libre Baskerville'}} >Skills</h1>
       <Row className='mt-3'>
         <ButtonGroup aria-label="Basic example" style={{width: '15vw'}} className='d-flex justify-content-center'>
           <Button style={{...buttonStyle(1), ...clickWeb(), backgroundColor: 'rgb(151, 68, 202)'}} onMouseEnter={() => handleMouseEnter(1)} onMouseLeave={handleMouseLeave}  onClick={handleweb} rounded>Web Development</Button>

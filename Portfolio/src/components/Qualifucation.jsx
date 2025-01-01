@@ -4,6 +4,7 @@ import AccordionContext from 'react-bootstrap/AccordionContext';
 import { useAccordionButton } from 'react-bootstrap/AccordionButton';
 import Card from 'react-bootstrap/Card';
 import { useResponsiveWidth } from '../Func';
+import { useResponsiveFontSize } from '../Func';
 import Container from 'react-bootstrap/esm/Container';
 import Row from 'react-bootstrap/esm/Row';
 import Col from 'react-bootstrap/esm/Col';
@@ -36,9 +37,10 @@ function ContextAwareToggle({ children, eventKey, callback }) {
 const Qualification = () => {
 
   const width = useResponsiveWidth();
+  const fontSize = useResponsiveFontSize();
 
   return (
-    <div className=' w-100 d-flex justify-content-center  p-4' id='qualify' style={{fontFamily: "Libre Baskerville", fontWeight: '400', fontStyle: 'normal'}}>
+    <div className=' w-100 d-flex justify-content-center  p-4' id='qualify' style={{fontFamily: "Libre Baskerville", fontWeight: '700', fontStyle: 'normal'}}>
       <Container fluid style={{height: 'auto', width}} className='pb-5'>
         <h1 className='d-flex justify-content-center p-3' style={{fontFamily: "Libre Baskerville", fontWeight: '700', fontStyle: 'normal'}}>QUALIFICATION</h1>
         
@@ -57,8 +59,8 @@ const Qualification = () => {
                       <Col >
                         <h5>B.E. MECHANICAL ENGINEERING</h5>
                         <h6>Anna University Regional Campus Madurai</h6>
-                        <p>CGPA: 7.56</p>
-                        <p>2021-2025</p>
+                        <p style={{fontFamily: 'Karla'}}>CGPA: 7.56</p>
+                        <p style={{fontFamily: 'Karla'}}>2021-2025</p>
                       </Col>
               
                       <Col className='d-flex justify-content-end' >
@@ -80,9 +82,9 @@ const Qualification = () => {
                     <Row>
 
                       <Col>
-                        <h5>Minor in COMPUTER SCIENCE ENGINEERING <p>(Full Stack development)</p></h5>
+                        <h5>Minor in CSE <p style={{fontFamily: 'Karla'}}>(Full Stack development)</p></h5>
                         <h6>Anna University Regional Campus Madurai</h6>
-                        <p>2021-2025</p>
+                        <p style={{fontFamily: 'Karla'}}>2021-2025</p>
                       </Col>
                       
                       <Col className='d-flex justify-content-end'>
@@ -104,10 +106,10 @@ const Qualification = () => {
                   <Card.Body style={{backgroundColor: 'rgb(238, 217, 251, 0.40) '}}>
                     <Row>
                       <Col>
-                        <h5>COMPUTER SCIENCE (Physics, Chemistry, Mathematics)</h5>
+                        <h5>COMPUTER SCIENCE <p style={{fontFamily: 'Karla'}}>(Physics, Chemistry, Mathematics)</p></h5>
                         <h6>Muthuthevar Mukulathor Higher Secondary School</h6>
-                        <p>Score: 90%</p>
-                        <p>2020-2021</p>
+                        <p style={{fontFamily: 'Karla'}}>Score: 90%</p>
+                        <p style={{fontFamily: 'Karla'}}>2020-2021</p>
                       </Col>
                       
                       <Col className='d-flex justify-content-end'>
@@ -131,7 +133,7 @@ const Qualification = () => {
                       <Col>
                         <h5>Muthuthevar Mukulathor Higher Secondary School</h5>
                         <h6>Score: 90%</h6>
-                        <p>2018-2019</p>
+                        <p style={{fontFamily: 'Karla'}}>2018-2019</p>
                       </Col>
                       
                       <Col className='d-flex justify-content-end'>
@@ -159,12 +161,12 @@ const Qualification = () => {
                       <Col>
                         <h5>Network Technician Careet Path</h5>
                         <h6>CISCO</h6>
-                        <p>July-2024</p>
+                        <p style={{fontFamily: 'Karla'}}>July-2024</p>
                       </Col>
                       
                       <Col className='d-flex justify-content-end'>
                         <Figure>
-                          <Figure.Image width={101} height={110}  alt="CISCO" src="/Qualify/cisco.jpg"/>
+                          <Figure.Image width={101} height={110}  alt="CISCO" src="/Qualify/cisco.jpg" />
                           <Figure.Caption>
                             <a style={{backgroundColor: 'rgb(94, 32, 133)',textDecoration: 'none', justifyContent: 'center', color: 'white', fontSize: '12px'}} href='https://www.credly.com/badges/71d0eea4-9721-45f2-93ee-ba9ae5e85d87/linked_in_profile' target='blank' className='d-flex align-items-center p-1'>Verify</a>
                           </Figure.Caption>
@@ -186,7 +188,7 @@ const Qualification = () => {
                       <Col>
                         <h5>Problem Solving through Programming in C</h5>
                         <h6>NPTEL</h6>
-                        <p>April-2023</p>
+                        <p style={{fontFamily: 'Karla'}}>April-2023</p>
                       </Col>
                       
                       <Col className='d-flex justify-content-end'>
@@ -212,7 +214,7 @@ const Qualification = () => {
                       <Col>
                         <h5>Programming in Java</h5>
                         <h6>NPTEL</h6>
-                        <p>April-2023</p>
+                        <p style={{fontFamily: 'Karla'}}>April-2023</p>
                       </Col>
                       
                       <Col className='d-flex justify-content-end'>
@@ -238,7 +240,7 @@ const Qualification = () => {
                       <Col>
                         <h5>Crash Course on Python</h5>
                         <h6>Grow with Google-Coursera</h6>
-                        <p>March-2023</p>
+                        <p style={{fontFamily: 'Karla'}}>March-2023</p>
                       </Col>
                       
                       <Col className='d-flex justify-content-end'>

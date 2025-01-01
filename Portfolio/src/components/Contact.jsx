@@ -7,7 +7,6 @@ import Stack from 'react-bootstrap/esm/Stack';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 import { useResponsiveWidth } from '../Func';
-  
 
 const Contact = () => {
 
@@ -36,11 +35,11 @@ const Contact = () => {
 
   
   return (
-    <div className='pb-5' id='contact' >
+    <div className='pb-4' id='contact' style={{fontFamily: "Libre Baskerville", fontWeight: '700', fontStyle: 'normal'}}>
       <Container className=' justify-content-center p-5' style={{width}}>
-        <h1 style={{fontFamily: "Libre Baskerville", fontWeight: '700', fontStyle: 'normal'}}>Drop Me a Line</h1>
+        <h4 style={{fontFamily: "Libre Baskerville", fontWeight: '700', fontStyle: 'normal'}}>Drop Me a Line</h4>
       
-        <Form noValidate validated={validated} onSubmit={handleSubmit} style={{fontFamily: "Libre Baskerville", fontWeight: '700', fontStyle: 'normal'}} >
+        <Form noValidate validated={validated} onSubmit={handleSubmit} style={{fontFamily: "Libre Baskerville", fontWeight: '400'}} >
           <Stack>
 
             <Form.Group as={Col} controlId="validationCustom01" className='pb-3 pt-4'>
@@ -57,11 +56,11 @@ const Contact = () => {
 
             <Form.Group as={Col} controlId="validationCustom02" className='pb-3'>
               <Form.Label>Comments</Form.Label>
-              <Form.Control required as="textarea" rows={5} placeholder="Write you thought about me" value={message} onChange={(e) => setMessage(e.target.value)} />
+              <Form.Control required as="textarea" rows={3} placeholder="Write you thought about me" value={message} onChange={(e) => setMessage(e.target.value)} />
               <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
             </Form.Group>
 
-            <Row className='pt-5 justify-content-center' >
+            <Row className='justify-content-center' >
               <Button type="submit" style={{width: '20vw', backgroundColor: 'rgb(151, 68, 202)', borderColor: 'white'}}>Submit</Button>
             </Row>
           </Stack>

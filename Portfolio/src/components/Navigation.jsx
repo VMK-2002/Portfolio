@@ -15,7 +15,7 @@ const Navigation = () => {
       
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ms-auto">
-          <Nav.Link style={{color: 'white', paddingRight: '20px '}} href="https://drive.google.com/file/d/1zhSwew23G7zUwi51Pl-eR83nVlq2hCWn/view?usp=drive_link" target='blank' >Resume</Nav.Link>
+          <Nav.Link style={{color: 'white', paddingRight: '20px '}} href="https://drive.google.com/file/d/1zhSwew23G7zUwi51Pl-eR83nVlq2hCWn/view?usp=sharing" target='blank' >Resume</Nav.Link>
           <Link style={{color: 'white', textDecoration: 'none', cursor: 'pointer', paddingRight: '20px'}} to="project" spy={true} smooth={true} offset={0} duration={500} className='d-flex align-items-center'>Projects</Link>
 
           <NavDropdown   title={<span style={{ color: 'white' }}>Contact</span>}  className="custom-dropdown"  id="basic-nav-dropdown">

@@ -9,7 +9,6 @@ import Navigation from "./components/Navigation";
 import ScrollThrough from "./components/ScrollThrough";
 import Qualification from "./components/Qualifucation";
 import Project from "./components/Project";
-import Demo from "./components/demo";
 
 
 function App() {
@@ -22,6 +21,7 @@ function App() {
     
       <ThemeProvider breakpoints={['xxxl', 'xxl', 'xl', 'lg', 'md', 'sm', 'xs', 'xxs']} minBreakpoint="xxs">
         <div style={{width:"100%"}} className="align-items-center">  
+         
           <div>
             <Home />
           </div>
@@ -32,7 +32,7 @@ function App() {
             <About/>
           </div>
         
-          <div style={{background: 'rgb(238, 217, 251)'}}>
+          <div style={{background: 'white'}}>
             <Project />
           </div>
         {/* <Demo /> */}
@@ -44,7 +44,7 @@ function App() {
             <Qualification />
           </div>
 
-          <div style={{background: 'c'}}>
+          <div style={{background: 'rgb(238, 217, 251)'}}>
             <Contact />
           </div>
      
